@@ -1,0 +1,60 @@
+/* InputBox.css */
+.input-box {
+  display: flex;
+  align-items: center;
+
+  border-radius: 25px;
+  padding: 5px;
+  transition: box-shadow 0.3s ease;
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  width: 43vw;
+  height: 8vh;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+}
+
+.input-box:focus-within {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.input-field {
+  flex-grow: 1;
+  height: 40px;
+  padding: 0 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.send-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: #18283b;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-icon.has-input {
+  background-color: #0159b6;
+}
+
+.send-icon i {
+  font-size: 18px;
+}
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}

@@ -1,0 +1,20 @@
+.card-container {
+  position: absolute;
+
+  height: 100vh;
+}
+
+.neomorphic-card {
+  width: 300px;
+  height: 200px;
+  border-radius: 48px;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+}
+
+/* Hover effect */
+.neomorphic-card:hover {
+  transform: translateY(-5px); /* Adjust the distance the card moves on hover */
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05); /* Adjust hover shadow */
+}

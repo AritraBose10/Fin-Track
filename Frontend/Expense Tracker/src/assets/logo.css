@@ -1,0 +1,56 @@
+:root {
+  padding: 0;
+  margin: 0;
+  border: none;
+  --text-color: hsl(0, 0%, 100%);
+}
+.logo.container {
+  padding: 0%;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 18vw, 5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+  padding: 0;
+  margin-top: 200px;
+  border: none;
+}
+
+.wrapper > div {
+  grid-area: 1/1/-1/-1;
+  position: relative;
+  left: -100%;
+  top: 40%;
+}
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: transparent;
+  background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background: linear-gradient(177deg, #302b63 53%, var(--text-color) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+.subtitle {
+  color: white;
+  font-size: x-large;
+  position: relative;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.sub {
+  margin-top: 50px;
+  margin-left: 150px;
+}

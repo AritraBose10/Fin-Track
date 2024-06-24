@@ -1,0 +1,43 @@
+# Node.js / NPM
+node_modules/
+npm-debug.log
+
+# React / Create React App build output
+/build/
+/.next/
+/out/
+
+# MongoDB
+*.log
+/data/db
+
+# Express.js
+npm-debug.log*
+
+# General
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python virtual environment
+venv/
+.env
+
+# Flask
+__pycache__/
+*.pyc
+instance/
+
+# Spacey
+.spacy/
+
+# IDE files (optional, adjust according to your IDE)
+.idea/
+.vscode/
+
+# OS generated files
+Thumbs.db
+.DS_Store

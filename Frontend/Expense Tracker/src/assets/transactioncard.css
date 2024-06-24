@@ -1,0 +1,365 @@
+.transaction-card {
+  width: 450px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  top: 38%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+.transaction-heading {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 5%;
+}
+
+.transaction-list {
+  width: 95%;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 10px;
+  position: absolute;
+  top: 32%;
+  border-top: #2a2a2a 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 160px;
+  bottom: 1px;
+  scrollbar-width: thin;
+  scrollbar-color: #1d1d1d #131313;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #131313;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #131313;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+
+  max-height: 50px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 100%;
+  background: linear-gradient(45deg, #181818, #131313);
+  box-shadow: 5px -5px 19px #1a1919, -5px 5px 19px #1d1d1d;
+}
+.transaction-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05);
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.transaction-description {
+  margin-bottom: 5px;
+}
+
+.transaction-amount {
+  position: absolute;
+  left: 75%;
+  margin-right: 23px;
+}
+
+.transaction-date {
+  color: #bbb;
+  font-size: 14px;
+  margin-left: 50px;
+  opacity: 0.7;
+}
+
+.net-info {
+  position: absolute;
+  top: 10%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.net-info h3 {
+  font-size: medium;
+  margin-top: 35px;
+  margin-left: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+
+.net-info p {
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+
+  top: 55%;
+  font: 1.5em Verdana;
+}
+
+.net-income {
+  color: #00945b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.net-expense {
+  color: #a60b0b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 35%;
+  top: 10%;
+  position: fixed;
+}
+
+.icon-bin.fa.fa-trash {
+  color: #fff;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  cursor: pointer;
+  width: 9px;
+  margin-top: -14px;
+}
+
+.icon-bin.fa.fa-trash:hover {
+  color: #6a0000; /* Red on hover */
+}
+
+.add-button {
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 80px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: transform 0.2s linear;
+}
+
+.add-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05);
+  background: #00633d;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.transaction-item:nth-child(n + 2) {
+  padding-top: 10px; /* Adjust as needed */
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 500px;
+}
+
+.form-container h2 {
+  font-size: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  position: relative;
+  left: -10%;
+}
+input::placeholder {
+  color: grey;
+  opacity: 0.3;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+
+  border-radius: 5px;
+  height: 50%;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  color: white;
+}
+.form-group input:hover {
+  transform: translateY(-5px); /* Adjust the distance the card moves on hover */
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05); /* Adjust hover shadow */
+}
+
+.submitbtn {
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  margin-left: 36%;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  background: #00945b;
+  transform: translateY(-4px);
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05);
+}
+button[type="button"] {
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 63%;
+  top: 10%;
+}
+button[type="button"]:hover {
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.05); /* Adjust hover shadow */
+  background-color: rgb(112, 0, 0);
+}
+.form-group {
+  margin-bottom: 7px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-group input[type="radio"] {
+  display: none;
+}
+
+.form-group input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #009688;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.form-group input[type="radio"]:checked + label::before {
+  background-color: #009688;
+}
+/* Add styles for the date input */
+input[type="date"] {
+  padding: 8px;
+  background: linear-gradient(45deg, #101010, #131313);
+  box-shadow: 5px -5px 19px #070707, -5px 5px 19px #1d1d1d;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+/* Adjust appearance for Webkit browsers (e.g., Chrome, Safari) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+/* Add a custom style for the date input container */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Add some additional styling for better appearance */
+.form-group label {
+  font-weight: bold;
+}
+
+/* Add margin between elements */
+.form-group + .form-group {
+  margin-top: 15px;
+}

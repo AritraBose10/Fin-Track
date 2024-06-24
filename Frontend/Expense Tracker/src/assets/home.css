@@ -1,0 +1,8 @@
+.home {
+  background: rgba(0, 0, 0, 0.929);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  border: none;
+}
