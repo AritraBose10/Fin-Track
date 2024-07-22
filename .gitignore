@@ -33,7 +33,7 @@ instance/
 
 # Spacey
 .spacy/
-
+train_data.json
 # IDE files (optional, adjust according to your IDE)
 .idea/
 .vscode/

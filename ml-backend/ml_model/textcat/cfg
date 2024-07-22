@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "income",
+    "expense"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
