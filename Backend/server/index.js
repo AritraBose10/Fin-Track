@@ -4,11 +4,16 @@ import express from "express";
 import mongoose from "mongoose";
 import authRoutes from "./middleware/auth.js";
 import Transaction from "./models/model.js";
-
+const corsOption = {
+  origin: "https://fin-track-blmgo5g86-aritrabose10s-projects.vercel.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 const app = express();
 
 dotenv.config();
-app.use(cors());
+app.use(cors(corsOption));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
