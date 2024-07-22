@@ -28,7 +28,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "fin-track-ml-backend-kpyigqyo5-aritrabose10s-projects.vercel.app/predict",
+        `${import.meta.env.VITE_URL}/auth/signup`,
         data,
         {
           headers: {
