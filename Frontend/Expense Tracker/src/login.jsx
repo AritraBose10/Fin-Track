@@ -28,7 +28,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "fin-track-ml-backend-kpyigqyo5-aritrabose10s-projects.vercel.app/predict",
         data,
         {
           headers: {
@@ -43,6 +43,7 @@ function Login() {
       }
     } catch (error) {
       console.error("Error:", error);
+      console.log("URL=", `${import.meta.env.VITE_URL}/auth/signup`);
     }
   };
 
@@ -60,7 +61,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${import.meta.env.VITE_URL}/api/auth/login`,
         data,
         {
           headers: {

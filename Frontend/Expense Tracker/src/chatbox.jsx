@@ -22,11 +22,14 @@ const InputBox = ({ addTransaction }) => {
 
     setIsLoading(true);
     setError(null);
-
+    console.log("URL", `${import.meta.env.VITE_ML_URL}/predict`);
     try {
-      const response = await axios.post("http://127.0.0.1:8080/predict", {
-        text: inputValue,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_ML_URL}/predict`,
+        {
+          text: inputValue,
+        }
+      );
 
       const { label, amount, desc } = response.data;
 
